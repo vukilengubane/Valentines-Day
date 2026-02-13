@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Be My Valentine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 id="valentine-text">💌 Be My Valentine 💌</h1>
+    <div id="heart" class="heart">❤️</div>
+
+    <!-- Buttons start side by side -->
+    <div class="button-container" id="button-container">
+        <button id="yes" class="btn">Yes</button>
+        <button id="no" class="btn">No</button>
+    </div>
+
+    <!-- Thank you message -->
+    <div id="thankyou">Thank You ❤️</div>
+
+    <!-- External JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

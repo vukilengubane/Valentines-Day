@@ -1,0 +1,95 @@
+body {
+    background-color: pink;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+h1 {
+    color: red;
+    animation: move 3s infinite alternate;
+    text-align: center;
+}
+
+@keyframes move {
+    from { transform: translateX(-20px); }
+    to { transform: translateX(20px); }
+}
+
+.heart {
+    font-size: 100px;
+    color: red;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#yes {
+    background-color: red;
+    color: white;
+}
+
+#no {
+    background-color: white;
+    color: red;
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+#thankyou {
+    font-size: 40px;
+    color: red;
+    animation: pulse 1s infinite;
+    display: none;
+}
+
+/* Bounce animation for No button */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-20px); }
+  50%  { transform: translateY(0); }
+  70%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.no-bounce {
+  animation: bounce 0.4s ease;
+}
